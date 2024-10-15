@@ -25,10 +25,10 @@ npx cap sync
 ### isWatchAvailable()
 
 ```typescript
-isWatchAvailable() => Promise<boolean>
+isWatchAvailable() => Promise<WatchAvailability>
 ```
 
-**Returns:** <code>Promise&lt;boolean&gt;</code>
+**Returns:** <code>Promise&lt;<a href="#watchavailability">WatchAvailability</a>&gt;</code>
 
 --------------------
 
@@ -49,6 +49,13 @@ updateApplicationContext(data: ApplicationContextUpdateData) => Promise<WatchCon
 
 
 ### Interfaces
+
+
+#### WatchAvailability
+
+| Prop              | Type                 |
+| ----------------- | -------------------- |
+| **`isAvailable`** | <code>boolean</code> |
 
 
 #### WatchConnectivityOperationResult

@@ -4,12 +4,13 @@ import type {
   ApplicationContextUpdateData,
   IonicWatchConnectivityPlugin,
   WatchConnectivityOperationResult,
+  WatchAvailability,
 } from './definitions';
 
 export class IonicWatchConnectivityWeb extends WebPlugin implements IonicWatchConnectivityPlugin {
-  async isWatchAvailable(): Promise<boolean> {
+  async isWatchAvailable(): Promise<WatchAvailability> {
     console.log('isWatchAvailable stub');
-    return false;
+    return { isAvailable: false };
   }
 
   async updateApplicationContext(data: ApplicationContextUpdateData): Promise<WatchConnectivityOperationResult> {

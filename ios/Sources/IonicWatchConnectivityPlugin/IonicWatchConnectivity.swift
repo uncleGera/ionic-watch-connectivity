@@ -6,9 +6,9 @@ import WatchConnectivity
     @objc func isWatchAvailable(_ call: CAPPluginCall) {
       let session = WCSession.default
       if session.isPaired && session.isWatchAppInstalled {
-        call.resolve(true)
+        call.resolve(["isAvailable": true])
       } else {
-        call.resolve(false)
+        call.resolve(["isAvailable": false])
       }
     }
 
