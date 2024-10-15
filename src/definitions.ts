@@ -8,5 +8,6 @@ export interface WatchConnectivityOperationResult {
 }
 
 export interface IonicWatchConnectivityPlugin {
+  isWatchAvailable(): Promise<boolean>;
   updateApplicationContext(data: ApplicationContextUpdateData): Promise<WatchConnectivityOperationResult>;
 }
