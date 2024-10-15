@@ -13,6 +13,7 @@ npx cap sync
 
 <docgen-index>
 
+* [`isWatchAvailable()`](#iswatchavailable)
 * [`updateApplicationContext(...)`](#updateapplicationcontext)
 * [Interfaces](#interfaces)
 
@@ -20,6 +21,17 @@ npx cap sync
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
+
+### isWatchAvailable()
+
+```typescript
+isWatchAvailable() => Promise<boolean>
+```
+
+**Returns:** <code>Promise&lt;boolean&gt;</code>
+
+--------------------
+
 
 ### updateApplicationContext(...)
 
