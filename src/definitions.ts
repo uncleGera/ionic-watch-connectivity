@@ -1,3 +1,12 @@
+export interface ApplicationContextUpdateData {
+  data: object;
+}
+
+export interface WatchConnectivityOperationResult {
+  success: boolean;
+  message?: string;
+}
+
 export interface IonicWatchConnectivityPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  updateApplicationContext(data: ApplicationContextUpdateData): Promise<WatchConnectivityOperationResult>;
 }

@@ -1,5 +1,5 @@
-import Foundation
 import Capacitor
+import Foundation
 
 /**
  * Please read the Capacitor iOS Plugin Development Guide
@@ -7,17 +7,15 @@ import Capacitor
  */
 @objc(IonicWatchConnectivityPlugin)
 public class IonicWatchConnectivityPlugin: CAPPlugin, CAPBridgedPlugin {
-    public let identifier = "IonicWatchConnectivityPlugin"
-    public let jsName = "IonicWatchConnectivity"
-    public let pluginMethods: [CAPPluginMethod] = [
-        CAPPluginMethod(name: "echo", returnType: CAPPluginReturnPromise)
-    ]
-    private let implementation = IonicWatchConnectivity()
+  public let identifier = "IonicWatchConnectivityPlugin"
+  public let jsName = "IonicWatchConnectivity"
+  public let pluginMethods: [CAPPluginMethod] = [
+    CAPPluginMethod(name: "updateApplicationContext", returnType: CAPPluginReturnPromise),
+  ]
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
-    }
+  private let implementation = IonicWatchConnectivity()
+
+  @objc func updateApplicationContext(_ call: CAPPluginCall) {
+    implementation.updateApplicationContext(call)
+  }
 }

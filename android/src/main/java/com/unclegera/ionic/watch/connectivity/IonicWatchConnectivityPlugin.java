@@ -12,11 +12,7 @@ public class IonicWatchConnectivityPlugin extends Plugin {
     private IonicWatchConnectivity implementation = new IonicWatchConnectivity();
 
     @PluginMethod
-    public void echo(PluginCall call) {
-        String value = call.getString("value");
-
-        JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(value));
-        call.resolve(ret);
-    }
+    public void methodThatRequiresIOS(PluginCall call) {
+         call.unimplemented("Not implemented on Android.");
+     }
 }
